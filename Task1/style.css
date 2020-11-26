@@ -1,0 +1,35 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+
+.container__currentMessage{
+    min-width: 15%;
+    min-height: 25px;
+    display:flex;
+    flex-direction: line;
+}
+
+li {
+    list-style-type: none;
+    margin: 2px;
+   }
+
+
+ul {
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.container__allMessages {
+
+    min-width: 60%;
+}
+
+
+.container__inputMessage {
+    min-width: 15%;
+}
