@@ -22,7 +22,9 @@ new Vue({
             this.newMessage = ""
         },
         removeLastMessage:function(){
-           document.getElementById("container__currentMessage-Id").lastChild.remove()
+           if (document.getElementById("container__currentMessage-Id").children.length > 1){
+               document.getElementById("container__currentMessage-Id").lastChild.remove()
+           }
         }
     }
 })
