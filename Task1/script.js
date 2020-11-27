@@ -1,7 +1,10 @@
 Vue.component('messages', {
     template: '\
-        <li> {{ title }} </li>\ ',
-    props: ['title']
+        <li  > {{ title }} </li>\ ',
+    props: ['title'],
+    
+
+    
 })
 
 new Vue({
@@ -9,22 +12,27 @@ new Vue({
     data:{
         newMessage:'',
         messagesList:[],
-        nextTodoId: 1
+        nextMessageId: 0
     },
     methods:{
         addButton:function(){
             if (this.newMessage != "") {
                 this.messagesList.push({
-                    id:this.nextTodoId++,
+                    id:this.nextMessageId++,
                     text:this.newMessage
                 })
             }
             this.newMessage = ""
         },
         removeLastMessage:function(){
-           if (document.getElementById("container__currentMessage-Id").children.length > 1){
-               document.getElementById("container__currentMessage-Id").lastChild.remove()
-           }
+        //    if (document.getElementById("container__currentMessage-Id").children.length > 1){
+        //        let i = document.getElementById("container__currentMessage-Id").lastChild.id
+        //        document.getElementById("container__currentMessage-Id").lastChild.remove()
+        //        console.log(document.getElementById("container__allMessages-Id").children[0].children[i].insertAdjacentHTML("afterbegin","<button>x</button>"))
+        //    }
         }
+    },
+    mounted:{
+        
     }
 })

@@ -14,16 +14,16 @@
                 <li
                   is="messages"
                   v-for="(message, index) in messagesList"
-                  v-bind:key="message.id"
+                  v-bind:id="message.id"
                   v-bind:title="message.text"
                 ></li>
         </div>
-        <div class = "container__allMessages">
+        <div class = "container__allMessages" id = "container__allMessages-Id">
             <ul>
                 <li
                   is="messages"
                   v-for="(message, index) in messagesList"
-                  v-bind:key="message.id"
+                  v-bind:id="message.id"
                   v-bind:title="message.text"
                 ></li>
               </ul>
